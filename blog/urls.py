@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.urls import path
 from . import views
 
@@ -18,4 +19,5 @@ URL'in adıdır. Bu view'un adı ile aynı olabilir ama tamamen farklı bir
 """
 urlpatterns = [
     path('', views.post_list, name='post_list'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 ]
